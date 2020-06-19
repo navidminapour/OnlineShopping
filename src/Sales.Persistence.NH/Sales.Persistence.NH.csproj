@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.NH\Framework.NH.csproj" />
+    <ProjectReference Include="..\Sales.Domain\Sales.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NHibernate">
+      <HintPath>C:\Users\n.minapoor\.nuget\packages\nhibernate\5.2.7\lib\netcoreapp2.0\NHibernate.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

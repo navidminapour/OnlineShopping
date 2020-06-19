@@ -1,0 +1,27 @@
+<div class="product">
+    <div class="flip-container">
+        <div class="flipper">
+            <div class="front">
+                <a [routerLink]="1"><img src="img/product1.jpg" alt="" class="img-fluid" /></a>
+            </div>
+            <div class="back">
+                <a [routerLink]="1"><img src="img/product1_2.jpg" alt="" class="img-fluid" /></a>
+            </div>
+        </div>
+    </div>
+    <a [routerLink]="1" class="invisible"><img src="img/product1.jpg" alt="" class="img-fluid" /></a>
+    <div class="text">
+        <h3>
+            <a [routerLink]="1">Fur coat with very but very very long name</a>
+        </h3>
+        <p class="price"><del></del>$143.00</p>
+        <p class="buttons">
+            <a [routerLink]="1" class="btn btn-outline-secondary">View detail</a
+        ><a routerLink="/order/shopping-cart" class="btn btn-primary"
+          ><i class="fa fa-shopping-cart"></i>Add to cart</a
+        >
+      </p>
+    </div>
+    <!-- /.text-->
+  </div>
+  <!-- /.product            -->

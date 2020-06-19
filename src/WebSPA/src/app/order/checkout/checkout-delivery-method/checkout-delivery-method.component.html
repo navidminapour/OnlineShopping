@@ -1,0 +1,45 @@
+<div class="box">
+    <form method="get" action="checkout3.html">
+        <h1>Checkout - Delivery method</h1>
+        <div class="nav flex-column flex-sm-row nav-pills">
+            <a routerLink="/order/checkout/address" class="nav-link flex-sm-fill text-sm-center"> <i class="fa fa-map-marker">                  </i>Address</a>
+            <a routerLink="/order/checkout/delivery-method" class="nav-link flex-sm-fill text-sm-center active"> <i class="fa fa-truck">                       </i>Delivery Method</a>
+            <a href="#" class="nav-link flex-sm-fill text-sm-center disabled"> <i class="fa fa-money">                      </i>Payment Method</a>
+            <a href="#" class="nav-link flex-sm-fill text-sm-center disabled"> <i class="fa fa-eye">                     </i>Order Review</a>
+        </div>
+        <div class="content py-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box shipping-method">
+                        <h4>USPS Next Day</h4>
+                        <p>Get it right on next day - fastest option possible.</p>
+                        <div class="box-footer text-center">
+                            <input type="radio" name="delivery" value="delivery1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box shipping-method">
+                        <h4>USPS Next Day</h4>
+                        <p>Get it right on next day - fastest option possible.</p>
+                        <div class="box-footer text-center">
+                            <input type="radio" name="delivery" value="delivery2">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box shipping-method">
+                        <h4>USPS Next Day</h4>
+                        <p>Get it right on next day - fastest option possible.</p>
+                        <div class="box-footer text-center">
+                            <input type="radio" name="delivery" value="delivery3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-footer d-flex justify-content-between"><a routerLink="../address" class="btn btn-outline-secondary"><i class="fa fa-chevron-left"></i>Back to address</a>
+            <a routerLink="../payment-method" class="btn btn-primary">Continue to Payment Method<i class="fa fa-chevron-right"></i></a>
+        </div>
+    </form>
+</div>

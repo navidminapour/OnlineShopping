@@ -1,0 +1,36 @@
+<div id="productMain" class="row">
+    <div class="col-md-6">
+        <div class="shop-detail-carousel">
+            <owl-carousel-o [options]="customOptions" #owlCar (changed)="onCarouselChanged($event)">
+                <ng-template carouselSlide><img src="img/detailbig1.jpg" alt="" class="img-fluid"></ng-template>
+                <ng-template carouselSlide><img src="img/detailbig2.jpg" alt="" class="img-fluid"></ng-template>
+                <ng-template carouselSlide><img src="img/detailbig3.jpg" alt="" class="img-fluid"></ng-template>
+            </owl-carousel-o>
+        </div>
+
+        <div class="ribbon sale">
+            <div class="theribbon">SALE</div>
+            <div class="ribbon-background"></div>
+        </div>
+        <!-- /.ribbon-->
+        <div class="ribbon new">
+            <div class="theribbon">NEW</div>
+            <div class="ribbon-background"></div>
+        </div>
+        <!-- /.ribbon-->
+    </div>
+    <div class="col-md-6">
+        <div class="box">
+            <h1 class="text-center">White Blouse Armani</h1>
+            <p class="goToDescription"><a (click)="descriptionClicked()" class="scroll-to">Scroll to product details, material &amp; care and sizing</a></p>
+            <p class="price">$124.00</p>
+            <p class="text-center buttons"><a routerLink="/order/shopping-cart" class="btn btn-primary"><i class="fa fa-shopping-cart"></i> Add to cart</a><a routerLink="/customer/wish-list" class="btn btn-outline-primary"><i class="fa fa-heart"></i> Add to wishlist</a></p>
+        </div>
+        <div class="owl-thumbs">
+
+            <button class="owl-thumb-item" (click)="changeSlide(0)" [ngClass]="slideClasses[0]"><img src="img/detailsquare.jpg" alt="" class="img-fluid"></button>
+            <button class="owl-thumb-item" (click)="changeSlide(1)" [ngClass]="slideClasses[1]"><img src="img/detailsquare2.jpg" alt="" class="img-fluid"></button>
+            <button class="owl-thumb-item" (click)="changeSlide(2)" [ngClass]="slideClasses[2]"><img src="img/detailsquare3.jpg" alt="" class="img-fluid"></button>
+        </div>
+    </div>
+</div>

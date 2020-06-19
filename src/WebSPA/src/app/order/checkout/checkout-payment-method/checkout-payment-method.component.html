@@ -1,0 +1,48 @@
+<div class="box">
+    <form method="get" action="checkout4.html">
+        <h1>Checkout - Payment method</h1>
+        <div class="nav flex-column flex-sm-row nav-pills">
+            <a routerLink="/order/checkout/address" class="nav-link flex-sm-fill text-sm-center"> <i class="fa fa-map-marker">                  </i>Address</a>
+            <a routerLink="/order/checkout/delivery-method" class="nav-link flex-sm-fill text-sm-center"> <i class="fa fa-truck">                       </i>Delivery Method</a>
+            <a routerLink="/order/checkout/payment-method" class="nav-link flex-sm-fill text-sm-center active"> <i class="fa fa-money">                      </i>Payment Method</a>
+            <a href="#" class="nav-link flex-sm-fill text-sm-center disabled"> <i class="fa fa-eye">                     </i>Order Review</a>
+        </div>
+        <div class="content py-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="box payment-method">
+                        <h4>Paypal</h4>
+                        <p>We like it all.</p>
+                        <div class="box-footer text-center">
+                            <input type="radio" name="payment" value="payment1">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box payment-method">
+                        <h4>Payment gateway</h4>
+                        <p>VISA and Mastercard only.</p>
+                        <div class="box-footer text-center">
+                            <input type="radio" name="payment" value="payment2">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="box payment-method">
+                        <h4>Cash on delivery</h4>
+                        <p>You pay when you get it.</p>
+                        <div class="box-footer text-center">
+                            <input type="radio" name="payment" value="payment3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row-->
+        </div>
+        <!-- /.content-->
+        <div class="box-footer d-flex justify-content-between"><a routerLink="../delivery-method" class="btn btn-outline-secondary"><i class="fa fa-chevron-left"></i>Back to Shipping Method</a>
+            <a routerLink="../order-review" type="submit" class="btn btn-primary">Continue to Order Review<i class="fa fa-chevron-right"></i></a>
+        </div>
+    </form>
+    <!-- /.box-->
+</div>

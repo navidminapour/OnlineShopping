@@ -1,0 +1,80 @@
+version: '3.4'
+
+services:
+  sales.interface.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:32001
+    ports:
+      - 32001:443
+    volumes:
+      - .\OnlineShopping\microsoft\usersecrets:/root/.microsoft/usersecrets:ro
+      - .\OnlineShopping\aspnet\https:/root/.aspnet/https:ro
+    depends_on:
+      - mssqldb
+      - rabbitmq
+      - mongodb
+
+  warehouse.interface.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=https://+:443;http://+:32002
+    ports:
+      - 32002:443
+    volumes:
+      - .\OnlineShopping\microsoft\usersecrets:/root/.microsoft/usersecrets:ro
+      - .\OnlineShopping\aspnet\https:/root/.aspnet/https:ro
+    depends_on:
+      - mssqldb
+      - rabbitmq
+      - mongodb
+  webspa:
+    ports:
+      - 32003:80 
+    depends_on:
+      - mssqldb
+      - rabbitmq
+      - mongodb
+
+  eventdispatcher:
+    volumes:
+      - .\OnlineShopping\microsoft\usersecrets:/root/.microsoft/usersecrets:ro
+    depends_on:
+      - mssqldb
+      - rabbitmq
+      - mongodb
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    depends_on:
+      - mssqldb
+
+  mongodb:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+    volumes:
+      - eshop-nosqldata:/data/db
+
+  mssqldb:
+    image: "mcr.microsoft.com/mssql/server"
+    environment:
+        SA_PASSWORD: "MyPassw0rd123456"
+        ACCEPT_EULA: "Y"
+    ports:
+      - 1401:1433
+    volumes:
+      - eshop-sqldata:/var/opt/mssql
+
+volumes:
+  eshop-sqldata:
+    external: false
+  eshop-nosqldata:
+    external: false

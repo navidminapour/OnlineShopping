@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.5" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.5" />
+    <PackageReference Include="Scrutor" Version="3.2.1" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Framework.Core\Framework.Core.csproj" />
+    <ProjectReference Include="..\Framework.NH\Framework.NH.csproj" />
+    <ProjectReference Include="..\Sales.Domain.Contracts\Sales.Domain.Contracts.csproj" />
+    <ProjectReference Include="..\Warehouse.Application\Warehouse.Application.csproj" />
+    <ProjectReference Include="..\Warehouse.Interface.Facade\Warehouse.Interface.Facade.csproj" />
+    <ProjectReference Include="..\Warehouse.Interface.RabbitMq\Warehouse.Interface.RabbitMq.csproj" />
+    <ProjectReference Include="..\Warehouse.Persistence.NH\Warehouse.Persistence.NH.csproj" />
+  </ItemGroup>
+
+</Project>

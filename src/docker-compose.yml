@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  sales.interface.api:
+    image: ${DOCKER_REGISTRY-}salesinterfaceapi
+    build:
+      context: .
+      dockerfile: Sales.Interface.Api/Dockerfile
+  warehouse.interface.api:
+    image: ${DOCKER_REGISTRY-}warehouseinterfaceapi
+    build:
+      context: .
+      dockerfile: Warehouse.Interface.Api/Dockerfile
+  eventdispatcher:
+    image: ${DOCKER_REGISTRY-}eventdispatcher
+    build:
+      context: .
+      dockerfile: EventDispatcher/Dockerfile
+  webspa:
+    image: webspa
+    build:
+      context: .
+      dockerfile: WebSPA/docker/Dockerfile
+      args:
+        - skip_client_build=true

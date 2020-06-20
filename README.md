@@ -1,11 +1,22 @@
 <p><strong>Sample Microservices Architecture with using .net Core, RabbitMQ and Docker</strong></p>
 <p>
-I created this simple application to demonstrate an architecture in microservices with the approach of Domain Driven Design(DDD).
-It has two bounded contexts, Sales and Warehouse which communicate with each other through RabbitMQ message broker.
-The microservices were implemented fully decoupled and not directly call each other but with publishing and subscribing to events. 
+I created this simple application to practice and demonstrate an architecture in microservices with the approach of Domain Driven Design(DDD).
+</p>
+<p>
+It has two bounded contexts, Sales and Warehouse which communicate with each other through RabbitMQ message broker. 
+</p>
+<p>
+The microservices were dockerized and implemented fully decoupled and not directly call each other but with publishing and subscribing to events. 
+</p>
+<p>
 There are two kinds of Domain and Integration events with the consideration of eventual consistency which provided by NHibernate event listeners.
-Integration events persist in a database before publishing on the message broker and a worker service is responsible to do this. 
-Besides, Requests to the microservices were handled by MediateR which provides command pattern.
-I also created a Single Page Application(SPA) with Angular 
-I would like to share the technologies 
+</p>
+<p>
+Domain events are just raised in-process (in-memory) and within the same transaction or operation while Integration events first persist in a transactional database and then are published to the message broker by a worker service. 
+</p>
+<p>
+Command Pattern provided by MediatR is used in order to handle new requests which are sent to the microservices.
+</p>
+<p>
+I also created a Single Page Application(SPA) with Angular Js which currently just send creation of order to the Sales microservice. I have not created any API Gateway yet but I will.
 </p>

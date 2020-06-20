@@ -110,7 +110,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSPA", "WebSPA\", "{104D0
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DFA9852F-5198-44B1-A5A9-AC337A73928D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sales.Domain.Tests", "Sales.Domain.Tests\Sales.Domain.Tests.csproj", "{CF461D44-1CAB-4B3B-9C78-EB3BB64D1FE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sales.Domain.Tests", "Sales.Domain.Tests\Sales.Domain.Tests.csproj", "{CF461D44-1CAB-4B3B-9C78-EB3BB64D1FE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

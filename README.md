@@ -9,7 +9,7 @@ It has two bounded contexts, Sales and Warehouse which communicate with each oth
 The microservices were dockerized and implemented fully decoupled and not directly call each other but with publishing and subscribing to events. 
 </p>
 <p>
-There are two kinds of Domain and Integration events with the consideration of eventual consistency which provided by NHibernate event listeners.
+There are two kinds of events, Domain and Integration events with the consideration of eventual consistency which provided by NHibernate event listeners.
 </p>
 <p>
 Domain events are just raised in-process (in-memory) and within the same transaction or operation while Integration events first persist in a transactional database and then are published to the message broker by a worker service. 

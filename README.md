@@ -1,6 +1,6 @@
 <p><strong>Sample Microservices Architecture using .net Core, RabbitMQ and Docker</strong></p>
 <p>
-I created this simple application to practice and demonstrate an architecture in microservices with the approach of Domain-Driven Design(DDD).
+I created this application just to practice and demonstrate an architecture in microservices with the approach of Domain-Driven Design(DDD).
 </p>
 <p>
 It has two bounded contexts, Sales and Warehouse which communicate with each other through RabbitMQ message broker. 

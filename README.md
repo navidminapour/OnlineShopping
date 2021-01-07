@@ -18,5 +18,5 @@ Domain events are just raised in-process (in-memory) and within the same transac
 Command Pattern provided by MediatR is used to handle new requests which are sent to the microservices.
 </p>
 <p>
-I also created a Single Page Application(SPA) with Angular Js which currently just sends creation of order to the Sales microservice. I have not created any API Gateway yet but I will.
+I also created a Single Page Application(SPA) with Angular which currently just sends creation of order to the Sales microservice. I have not created any API Gateway yet but I will.
 </p>
